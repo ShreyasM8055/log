@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Assign - Login</title>
+    <title>MS LOGIN - Login</title>
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="styles.css">
     <!-- Link to Google Fonts for Lato font -->
@@ -19,7 +19,7 @@
             var id_token = googleUser.getAuthResponse().id_token;
         
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://shreyasm8055.github.io/log/');
+            xhr.open('POST', 'http://127.0.0.1:5501');
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onload = function () {
                 console.log('Signed in as: ' + xhr.responseText);
@@ -62,7 +62,9 @@
                     </a> |
                     <a href="#">forgot assword</a>
                 </div>
-                                <!-- Add elements for displaying email and name -->
+                <h2>LOGIN TO MS TECH SOL.</h2>
+
+                <!-- Add elements for displaying email and name -->
                 <p id="user-email"></p>
                 <p id="user-name"></p>
         
@@ -73,8 +75,6 @@
                         <div class="g-signin2" data-onsuccess="onSignIn"></div>
                         <!-- Your Google Sign-In button content here -->
                     </button>
-                    <div class="data>"
-                        
                     
                 </div>
                 </form>
