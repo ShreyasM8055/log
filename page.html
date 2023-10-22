@@ -19,13 +19,32 @@
     <main>
        <div class="user-info-container">
         <h1>Welcome to MS TECH</h1>
+            </div>
         <div class="user-info">
             <p id="user-email"></p>
             <p id="user-name"></p>
             <img id="user-profile-image" src="" alt="Profile Picture">
         </div>
-       </div>
     </main>
+        <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const userEmail = urlParams.get("email");
+        const userDisplayName = urlParams.get("name");
+        const userProfileImage = urlParams.get("image");
+
+        // Display the user's email
+        var userEmailDisplay = document.getElementById("user-email");
+        userEmailDisplay.textContent = "Logged in as: " + userEmail;
+
+        // Display the user's name
+        var userNameDisplay = document.getElementById("user-name");
+        userNameDisplay.textContent = "Hello, " + userDisplayName;
+
+        // Display the user's profile picture
+        var userProfileImageDisplay = document.getElementById("user-profile-image");
+        userProfileImageDisplay.src = userProfileImage; // Set the profile picture's src attribute
+    </script>
     <script src="page-script.js"></script>
 </body>
 </html>
