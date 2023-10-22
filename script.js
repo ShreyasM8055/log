@@ -22,7 +22,7 @@ gapi.load('auth2', function () {
     }).then(function (auth2) {
         // You can attach the click handler for your Google Sign-In button here
         var options = new gapi.auth2.SigninOptionsBuilder();
-        options.setLoginHint('shreyasm8055@gmail.com'); // Replace with the user's email
+        options.setLoginHint('shreyasm8055@gmail..com'); // Replace with the user's email
         auth2.attachClickHandler('google-signin', options, onSignIn, onFailure);
     });
 });
@@ -34,7 +34,7 @@ function onSignIn(googleUser) {
     var userProfileImage = profile.getImageUrl();
 
     // Construct the URL with user information as parameters
- var pageUrl = `page.html?email=${encodeURIComponent(userEmail)}&name=${encodeURIComponent(userDisplayName)}&image=${encodeURIComponent(userProfileImage}`;
+    var pageUrl = "page.html?email=" + encodeURIComponent(userEmail) + "&name=" + encodeURIComponent(userDisplayName) + "&image=" + encodeURIComponent(userProfileImage);
 
     // Redirect to the page.html with user information
     window.location.href = pageUrl;
@@ -47,7 +47,7 @@ function toggleMenu() {
 
       function handleCredentialResponse(googleUser) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://shreyasm8055.github.io/log/');
+        xhr.open('POST', ' https://shreyasm8055.github.io/log/');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function() {
           console.log('Signed in as: ' + xhr.responseText);
