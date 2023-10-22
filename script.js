@@ -45,3 +45,14 @@ function toggleMenu() {
     menuLinks.classList.toggle('active');
 }
 
+      function handleCredentialResponse(googleUser) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://shreyasm8055.github.io/log/');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+          console.log('Signed in as: ' + xhr.responseText);
+        };
+        xhr.send('idtoken=' + id_token);
+      }
+    
+
