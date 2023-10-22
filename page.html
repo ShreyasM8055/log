@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
     <div class="menu">
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger menu icon -->
         <a href="#">MS TECH SOLUTIONS</a>
         <div class="menu-links">
             <a href="#">Home</a>
             <a href="#">Profile</a>
             <a href="#">About</a>
+            <div class="user-info">
+                <p id="user-email"></p>
+                <p id="user-name"></p>
+                <img id="user-profile-image" src="" alt="Profile Picture">
+            </div>
         </div>
     </div>
 
     <main>
         <div class="sample-container">
-            <h1>WELCOME TO MS TECH</h1>
+            <h1>WECLOME TO MS TECH</h1>
         </div>
     </main>
-    <script src="script.js"></script>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
